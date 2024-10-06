@@ -5,8 +5,6 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    minlength: 3,
-    maxlength: 20,
     trim: true,
   },
   userEmail: {
@@ -20,9 +18,6 @@ const userSchema = mongoose.Schema({
   userPassword: {
     type: String,
     required: true,
-    minlength: 8,
-    maxlength: 255,
-    select: false, // This will not be returned in the response
   },
 
   userAddress: {
